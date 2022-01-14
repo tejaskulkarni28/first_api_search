@@ -70,16 +70,18 @@ window.addEventListener('load', ()=>{
 
     function createContent(results){
         let intialContent = '';
-        results.map(recipe_response_data=>{
+        results.slice(0,4).map(recipe_response_data=>{
             intialContent+=
             `<div class="recipe-response">
-            <img src="${recipe_response_data.recipe.image}" alt="">
-           <div class="recipe-child-container">
-              <h1 class="title">${recipe_response_data.recipe.label}</h1>
-              <a href="${recipe_response_data.recipe.url}" class="view-recipe">View Recipe</a>
-          <p class="recipe-description">Calories: ${recipe_response_data.recipe.calories.toFixed(2)}</p>
-      </div>
-      </div>`;
+                <div class="recipe-image-container">
+                    <img src="${recipe_response_data.recipe.image}" alt="">
+                </div>
+                <div class="recipe-child-container">
+                    <h1 class="title">${recipe_response_data.recipe.label}</h1>
+                    <a href="${recipe_response_data.recipe.url}" class="view-recipe">View Recipe</a>
+                    <p class="recipe-description">Calories: ${recipe_response_data.recipe.calories.toFixed(2)}</p>
+                </div>
+            </div>`;
         })
         recipe_search_response.innerHTML=intialContent;   
     }

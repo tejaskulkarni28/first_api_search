@@ -1,292 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
 *{
-    padding:0;
-    margin:0;
-    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type:none;
 }
-html{
-    font-family: 'Jost', sans-serif;
-    height:5000px;
+
+.navbar-container{
+    background-color: #1877f2;
+    padding: 5px;
+    height: 35px;
 }
-.nav-bar{
-    background-color: #ef4f4f;
-}
-.nav-bar li{
-    padding:12px;
-}
-.nav-bar li a{
-    list-style-type: none;
+.navbar-container a{
+    color:white;
+    font-size:22px;
     text-decoration: none;
-    padding:24px;
-    font-size:26px;
-    font-family: 'Jost', sans-serif;
-    color:white;
+    list-style: none;
+    font-family: 'Mochiy Pop P One', sans-serif;
 }
-.nav-bar li a:hover{
-    color: black;
-}
-
-.container{
-    background-color:#dadbf3;
-    margin-top:10px;
-    margin-bottom:10px;
-    padding-top:135px;
-    padding-bottom:135px;
-}
-
 .weather-container{
-    background-color: #417ccc;
-    color:white;
-    width:500px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-    height:300px;
-    border-radius: 50px;
-    text-shadow: 2px 2px 4px #000000;
+    background-color: #1877f2;
+    font-family: 'Mochiy Pop P One', sans-serif; 
+    color: white;
+    width: 300px;
+    height: 100px; 
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 50px;
 }
-
-.weather-container img{
-    width: 108px;
-}
-
-.country h1{
-   padding-top: 4px;
-   font-size:35px;
-}
-
-.description p{
-    padding-top: -8px;
+.weather-container h1{ 
+    margin: auto;
     font-size: 20px;
+    text-align: center;
 }
-
-.degree p{
-    padding-top: 22px;
-    font-size:51px;
+.weather-container p{
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
 }
 
 .recipe-container{
-    background-color:#f1e7e7;
-    height: 100%;
+    margin-top: 10px;
+    height: 100px;
     width: 100%;
-
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
-
 .recipe-search{
-    background-color: #f1e7e7;
-    width:100%;
-    padding:237px;
-    padding-bottom: 10;
+    margin: auto;
 }
 
-.recipe-search input{
-    margin-left: auto;
-    margin-right: auto;
-    width:100%;
-    padding:10px;
-    font-size:20px;
-    font-family: 'Jost', sans-serif;
+.recipe-container input{
+    display: flex;
+    align-items: center;  
+    padding: 5px;
+    width: 300px;
 }
-
-.recipe-response-container{
-    margin:0;
-    width:50%;
-    margin:auto;
+.recipe-container input[type="text"]{
+    font-size: 13px;
 }
-
 .recipe-response{
-    margin:0;
-    width:100%;
-    height:350px;
-    margin-bottom: 15px;
-    border:1px solid black;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin-bottom: 20px;
+    border: 1px solid black;
 }
-
-.recipe-response img{
-    width:100%;
-    height:76%;
-    object-fit: cover;
+.recipe-response-container{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
 }
-
+.recipe-image-container{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
+.recipe-image-container img{
+    width: 300px;
+}
 .recipe-child-container{
-    background-color:white;
-    padding:0px;
-    padding-bottom: 0px;
-    width:100%;
-    margin:0;
-    margin-top:36px;
-    border-top:0.5px solid black;
+    margin-top: 10px;
+    height:auto;
+    width: 200px;
+    margin: 20px;
+}
+.recipe-child-container h1{
+    object-fit: fill;
+    font-size: 15px;
+}
+.recipe-child-container a{
+    object-fit: fill;
+    font-size: 15px;
+    color: red;
 }
 
-.title{
-    font-size:19px;
-    margin:0;
-    padding:0;
-    margin-left:3px;
-    font-family: 'Cormorant Garamond', serif;
-}
-
-.view-recipe{
-    margin:0;
-    float:right;
-    background-color: #ef4f4f;
-    padding:7px;
-    color:white;
-    text-decoration:none;
-    font-size:14px;
-    margin-right:3px;
-    margin-top: -13;
-    border-radius: 10px;
-
-}
-.recipe-description{
-    margin-top: 0;
-    font-size:16px;
-    margin-left:3px;
-    font-family: 'Jost', sans-serif;
-}
+@media only screen and (max-width: 600px) {
+    .recipe-response-container{
+        display: flex;
+        flex-wrap:wrap;
+        height: auto;
+        width: 300px;
+        align-items: center;
+        margin: auto;
+    }
+    
+  }
 
 .footer{
-    text-align:center;
+    margin-top: 20px;
+    background-color:black;
     color:white;
-    background-color: black;
-}
-
-
-
-
-
-@media screen and (max-width: 600px){
-    .html{
-        margin:0;
-        padding:0;
-    }
-    .nav-bar li a{
-        list-style-type: none;
-        text-decoration: none;
-        padding:0;
-        font-size:18px;
-        font-family: 'Jost', sans-serif;
-        color:white;
-    }
-    .container{
-        height:auto;
-        width:100%;
-        padding:0;
-        margin:0;
-        background-color:#dadbf3;
-        margin-top:4px;
-        padding-top: 80px;
-        padding-bottom: 80px;
-    }
-    .weather-container{
-        width:80%;
-        height:190px;
-        background-color: #417ccc;
-        color:white;
-        margin:auto;
-        text-align: center;
-        border-radius: 20px;
-        text-shadow: 2px 2px 4px #000000;
-    }
-    .weather-container img{
-        width: 66px;
-    }
-    
-    .country h1{
-       padding-top: 0px;
-       font-size:23px;
-    }
-    
-    .description p{
-        padding-top: -8px;
-        font-size: 13px;
-    }
-    
-    .degree p{
-        padding-top: 5px;
-        font-size:32px;
-    }
-
-    .recipe-container{
-        width:100%;
-        height:100%;
-    }
-    
-    .recipe-search{
-        background-color: #f1e7e7;
-        margin:0;
-        padding:25px;
-        width:100%;
-        height: auto;
-    }
-    
-    .recipe-search input{
-        margin:0;
-        width:100%;
-        padding:6px;
-        font-size:20px;
-        font-family: 'Jost', sans-serif;
-    }
-    
-    .recipe-response-container{
-        margin:0;
-        padding-left:25px;
-        padding-right:25px;
-        width:100%;
-    }
-
-    .recipe-response{
-        margin:0;
-        width:100%;
-        height:350px;
-        margin-bottom: 15px;
-    }
-    
-    .recipe-response img{
-        width:100%;
-        height:76%;
-        object-fit: cover;
-    }
-    
-    .recipe-child-container{
-        background-color:white;
-        padding:0px;
-        padding-bottom: 0px;
-        width:100%;
-        margin:0;
-        margin-top:36px;
-        border-top:0.5px solid black;
-    }
-    
-    .title{
-        font-size:19px;
-        margin:0;
-        padding:0;
-        margin-left:3px;
-        font-family: 'Cormorant Garamond', serif;
-    }
-    
-    .view-recipe{
-        margin:0;
-        float:right;
-        background-color: #ef4f4f;
-        padding:7px;
-        color:white;
-        text-decoration:none;
-        font-size:14px;
-        margin-right:3px;
-        margin-top: -13;
-        border-radius: 10px;
-
-    }
-    .recipe-description{
-        margin-top: 0;
-        font-size:16px;
-        margin-left:3px;
-        font-family: 'Jost', sans-serif;
-    }
-    
-    
+    padding:10px;
+    font-size:15px;
+    text-align:center
 }
